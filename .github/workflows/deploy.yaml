@@ -4,10 +4,12 @@ on:
   push:
     branches:
       - main
+    tags:
+      - '*'
   workflow_dispatch:
 
 env:
-  IMAGE_NAME: 'zerosuxx/example'
+  IMAGE_NAME: 'zerosuxx/ansible'
   PLATFORMS: 'linux/amd64,linux/arm64'
   DOCKERHUB_USERNAME: ${{ secrets.DOCKERHUB_USERNAME }}
   DOCKERHUB_TOKEN: ${{ secrets.DOCKERHUB_TOKEN }}
