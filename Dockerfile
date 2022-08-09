@@ -14,6 +14,8 @@ RUN adduser -D ansible
 
 USER ansible
 
+RUN mkdir ~/.ssh
+
 ENV PATH=/home/ansible/.local/bin:$PATH
 ENV ANSIBLE_HOST_KEY_CHECKING=False
 ENV EDITOR=nano
