@@ -5,7 +5,8 @@ RUN apk add --no-cache \
     bash \
     openssh \
     sshpass \
-    nano
+    nano \
+    make
 
 RUN mkdir -p /etc/ansible && \
     echo 'localhost' > /etc/ansible/hosts
