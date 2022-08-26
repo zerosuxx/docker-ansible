@@ -6,7 +6,8 @@ RUN apk add --no-cache \
     openssh \
     sshpass \
     nano \
-    make
+    make \
+    py3-jmespath
 
 RUN mkdir -p /etc/ansible && \
     echo 'localhost' > /etc/ansible/hosts
