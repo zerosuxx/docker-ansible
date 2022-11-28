@@ -33,7 +33,7 @@ jobs:
           password: ${{ env.DOCKERHUB_TOKEN }}
       - name: Build and deploy docker image
         run: |
-          export VERSION=$(git describe --tags 2>/dev/null || echo '0.0.1')
+          export VERSION=$(git describe --tags 2>/dev/null || echo '0.1.0')
           echo $VERSION
           docker buildx build \
             --build-arg BUILDKIT_INLINE_CACHE=1 \
